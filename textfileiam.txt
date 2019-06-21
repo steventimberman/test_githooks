@@ -1,2 +1,3 @@
 I'm a text file, no
 I'm a new line!
+Another new line
