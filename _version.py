@@ -7,7 +7,7 @@ import updater.update_version as update_version
 # print (__package__)
 # from .update_version import  auto_update_version
 
-__version__ = "4.5.0"
+__version__ = "4.7.0"
 
 
 

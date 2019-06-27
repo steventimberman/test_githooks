@@ -101,7 +101,11 @@ def update_local_version(old_version_string, commit_message):
 
 def add_git_tag_and_amend(version_string):
     validate_version_string(version_string)
-    subprocess.run(["git", "commit", "--amend", "_version.py"])
+    try:
+        subprocess.run(["git", "commit", "--amend", "_version.py"])
+    except:
+        print ("no tag was made")
+
     subprocess.run(["git", "tag", version_string])
 
 
@@ -137,7 +141,7 @@ def auto_update_version(old_version_string):
     else:
         if commit_type == 'merge' or commit_type == 'squash':
             new_version_string = update_local_version(old_version_string, commit_message)
-            add_git_tag(new_version_string)
+            add_git_tag_and_amend(new_version_string)
             print ("You're new version is " + new_version_string)
 
 
