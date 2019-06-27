@@ -7,9 +7,9 @@ print (update_version)
 # print (__package__)
 # from .update_version import  auto_update_version
 
-__version__ = "4.0.0"
+__version__ = "4.2.0"
 
 
 print ("start")
-update_version.update_local_version(__version__, "i am a minor #major ")
+update_version.auto_update_version(__version__)
 print ("finish")

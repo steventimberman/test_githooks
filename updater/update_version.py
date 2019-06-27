@@ -138,7 +138,7 @@ def auto_update_version(old_version_string):
         if commit_type == 'merge' or commit_type == 'squash':
             new_version_string = update_local_version(old_version_string, commit_message)
             # add_git_tag(new_version_string)
-            print ("You're new version is " + version_string)
+            print ("You're new version is " + update_version_string)
 
 
 
