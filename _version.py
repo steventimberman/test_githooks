@@ -7,7 +7,7 @@ print (update_version)
 # print (__package__)
 # from .update_version import  auto_update_version
 
-__version__ = "4.1.0"
+__version__ = "4.2.0"
 
 
 print ("start")
