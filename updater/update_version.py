@@ -80,10 +80,9 @@ def write_new_version(old_version_string, new_version_string):
     with open("_version.py", "r") as old_file:
         with open(tmpdir, 'w') as new_file:
             for line in old_file:
-                for line in old_file:
-                    new_file.write(line.replace(old_version_string, new_version_string))
+                new_file.write(line.replace(old_version_string, new_version_string))
     remove("_version.py")
-    move(tmpdir, getcwd()+"/"+"version.py")
+    move(tmpdir, getcwd()+"/"+"_version.py")
 
 
 def update_local_version(old_version_string, commit_message):
@@ -138,7 +137,7 @@ def auto_update_version(old_version_string):
     else:
         if commit_type == 'merge' or commit_type == 'squash':
             new_version_string = update_local_version(old_version_string, commit_message)
-            add_git_tag(new_version_string)
+            # add_git_tag(new_version_string)
             print ("You're new version is " + version_string)
 
 
