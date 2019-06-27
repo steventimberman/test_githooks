@@ -1,7 +1,8 @@
 import sys
 import os
-import
+from update_version import auto_update_version
 
 __version__ = "1.2.3"
 
 
+auto_update_version(__version__)
