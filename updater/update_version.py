@@ -102,7 +102,7 @@ def update_local_version(old_version_string, commit_message):
 def add_git_tag_and_amend(version_string):
     validate_version_string(version_string)
     try:
-        subprocess.run(["git", "commit", "--amend", "_version.py"])
+        subprocess.run(["git", "commit", "-a"])
     except:
         print ("no tag was made")
 
